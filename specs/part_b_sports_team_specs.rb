@@ -3,9 +3,9 @@
 # Now we would like you to make a class that represents a sports team.
 # Make a class to represent a Team that has the properties Team name (String), Players (array of strings) and a Coach (String).
 # For each property in the class make a getter method than can return them.
-
 # Create a setter method to allow the coach's name to be updated.
 # Refactor the class to use attr_reader or attr_accessor instead of your own getter and setter methods.
+#
 # Create a method that adds a new player to the players array.
 # Add a method that takes in a string of a player's name and checks to see if they are in the players array.
 # Add a points property into your class that starts at 0.
@@ -21,23 +21,23 @@ class TestSports_Team < MiniTest::Test
 
   def test_get_team_name
     team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
-    assert_equal("West Bromwich Albion", team.get_team_name())
+    assert_equal("West Bromwich Albion", team.team_name())
   end
 
   def test_get_players
     team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
-    assert_equal(["Fred", "George", "Bert"], team.get_players())
+    assert_equal(["Fred", "George", "Bert"], team.players())
   end
 
   def test_get_coach
     team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
-    assert_equal("Alf Best", team.get_coach())
+    assert_equal("Alf Best", team.coach())
   end
 
   def test_set_coach
     team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
-    team.set_coach("George Best")
-    assert_equal("George Best", team.get_coach)
+    team.coach = "George Best"
+    assert_equal("George Best", team.coach)
   end
 
 
