@@ -40,7 +40,10 @@ class TestSports_Team < MiniTest::Test
     assert_equal("George Best", team.coach)
   end
 
-
+def test_add_new_player
+    team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
+    assert_equal(["Fred", "George", "Bert", "Jeff Astle"], team.add_new_player("Jeff Astle"))
+end
 
 
 
