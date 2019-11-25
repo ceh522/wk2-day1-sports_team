@@ -29,18 +29,26 @@ class TestStudent < MiniTest::Test
 
   def test_set_student_name
     student = Student.new("Bob", "E36")
-    student.get_student_name = "Fred"
-    assert_equal("Fred", student.set_student_name)
+    student.set_student_name("Fred")
+    assert_equal("Fred", student.get_student_name)
   end
 
   def test_set_cohort
     student = Student.new("Bob", "E36")
-    student.get_cohort = "G1"
-    assert_equal("G1", student.set_cohort)
+    student.set_cohort("G1")
+    assert_equal("G1", student.get_cohort)
   end
 
+  def test_can_talk
+    student = Student.new("Bob", "E36")
+    student.can_talk
+    assert_equal("I can talk!", student.can_talk)
+  end
 
-
+  def test_returns_favourite_programming_language
+    student = Student.new("Bob", "E36")
+    assert_equal("My favourite programming language is Ruby", student.returns_favourite_programming_language("Ruby"))
+  end
 
 
 
