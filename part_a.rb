@@ -36,10 +36,13 @@ def set_cohort(cohort)
   @cohort = cohort
 end
 
+def can_talk
+  return "I can talk!"
+end
 
-
-
-
+def returns_favourite_programming_language(favourite_programming_language)
+  return "My favourite programming language is #{favourite_programming_language}"
+end
 
 
 
