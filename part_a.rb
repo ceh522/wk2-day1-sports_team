@@ -8,10 +8,6 @@
 # Create a method that gets the student to talk (eg. Returns "I can talk!).
 # Create a method that takes in a students favourite programming language and returns it as part of a string (eg. student1.say_favourite_language("Ruby") -> "I love Ruby").
 
-# def test_student_name
-#   student = Student.new("Bob", E36)
-#   assert_equal("Bob", student.student_name())
-# end
 
 class Student
 
@@ -44,8 +40,7 @@ def returns_favourite_programming_language(favourite_programming_language)
   return "My favourite programming language is #{favourite_programming_language}"
 end
 
-
-
+#could put fav lang as instance variable - something student knows, noto what we are tellling them
 
 
 

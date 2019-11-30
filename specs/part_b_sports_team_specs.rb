@@ -18,6 +18,8 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 class TestSports_Team < MiniTest::Test
 
+  #could have def setup @team and define team then refer to @team if helpful
+
   def test_get_team_name
     team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best")
     assert_equal("West Bromwich Albion", team.team_name())
@@ -60,8 +62,8 @@ def test_points_scored
 end
 
 def test_match_outcome
-team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best",)
-assert_equal(3, team.match_outcome("won"))
+  team = Sports_Team.new("West Bromwich Albion", ["Fred", "George", "Bert"], "Alf Best",)
+  assert_equal(3, team.match_outcome("won"))
 end
 
 
